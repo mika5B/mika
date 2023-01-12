@@ -1,0 +1,80 @@
+<html>
+<head>
+   <title>Home - Amirul Latib</title>
+   <link href="asset/css/style.css" rel="stylesheet">
+   <meta name="viewport" content="width ="device-width, initial-scale=1">
+
+</head>
+<body>
+ <div id="bg">
+  <div class="navbar">
+	 <ul>
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href="about.html">About</a></li>
+	  <li><a href="education.html">Education</a></li>
+	  <li><a href="experience.html">Experience</a></li>
+	  <li><a href="family.html">Family</a></li>
+	  <li><a href="album.html">Album</a></li>
+ 	</ul>
+  </div>
+
+<div class="content-about">
+	<h1>Me, Myself, and I</h1>
+<br>
+	<p><i>Stepping Into Mika's Universe</i></p>
+<br><br>
+	<center><audio id="player" controls loop muted>
+		<source src="asset/audio/thinkin.mp3" type="audio/mp3">
+	</center>
+	</audio>
+<br><br>
+
+<div class="wrapper">
+	<div class="display">
+		<div id="time"></div>
+</div>
+</div>
+<br><br>
+
+<div class="links"> Follow Me;
+<br><br>
+	<a href="https://www.instagram.com/yourboymika_/" Target="_blank"><img src="asset/image/insta.png" width="43px"></a>
+	<a href="https://twitter.com/yourboymika_" Target="_blank"><img src="asset/image/twitter.png" width="55px"></a>
+</div>
+<br><br>
+
+<div class="content-vid">
+		<video controls src="asset/video/capcut.mov" type="video/mov" width="30%" height="50%"></video>
+</div>
+</div>
+<br><br>
+
+<script>
+
+setInterval(()=>{
+          const time = document.querySelector(".display #time");
+          let date = new Date();
+          let hours = date.getHours();
+          let minutes = date.getMinutes();
+          let seconds = date.getSeconds();
+          let day_night = "AM";
+          if(hours > 12){
+          day_night = "PM";
+          hours = hours - 12;
+           }
+if(seconds < 10){
+             seconds = "0" + seconds;
+           }
+           if(minutes < 10){
+             minutes = "0" + minutes;
+           }
+           if(hours < 10){
+             hours = "0" + hours;
+           }
+           time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+         });
+
+</script>
+
+</body>
+</html>
